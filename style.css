@@ -1,0 +1,90 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("../img/mar-e-arcoiris.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1rf 2rf 1rf;
+    grid-template-rows: repeat(5, 200px);
+    gap: 10px;
+    grid-template-areas: 'title title title'
+                         '. result .'
+                         'aside cartas content'
+                         'aside cartas content'
+                         '. button .'
+}
+
+.result {
+    border-radius: 10px;
+    background-color: #E9F4F6;
+    display: flex;
+    grid-area: result;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+h1 {
+    font-size: 70px;
+    padding-top: 5%;
+    grid-area: title;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin: 5%;
+    flex-direction: row;
+}
+
+.main {
+    position: relative;
+    grid-area: cartas;
+    display: flex;
+}
+
+.grid {
+    position: absolute;
+    padding: 10px;
+    justify-content: center;
+    gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+img {
+    height: 130px;
+    width: 130px;
+}
+
+#btn-reiniciar {
+    display: none;
+    grid-area: button;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    height: 30%;
+    width: 40%;
+    padding: 10px 15px;
+    font-size: 22px;
+    border: 0;
+    border-radius: 30px;
+    color: black;
+    background-color: rgb(130, 55, 190);
+    justify-content: center;
+    align-items: center;
+}
+
+button:hover {
+    background-color: rgb(80, 47, 110);
+}
